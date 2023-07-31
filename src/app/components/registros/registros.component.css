@@ -1,0 +1,10 @@
+.container {
+    width: 100%;
+    overflow: hidden; 
+}
+
+.column {
+    width: 50%;
+    float: left;
+}
+  

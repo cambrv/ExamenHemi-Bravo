@@ -1,0 +1,32 @@
+
+<form class="formulario" (ngSubmit)="agregarRegistro(Cod.value, Fecha.value, Cliente.value, Tipo.value, Des.value)">
+    <div class="form-row">
+        <label for="codigo"> Codigo:  </label>
+        <input #Cod type="text" id="codigo">
+    </div>
+    <div class="form-row">
+        <label for="fecha"> Fecha:  </label>
+        <input #Fecha type="date" id="fecha">
+    </div>
+    <div class="form-row">
+        <label for="cliente"> Cliente:  </label>
+        <input #Cliente type="text" id="cliente" >
+    </div>
+    <div class="form-row">
+        <label for="tipo"> Tipo:  </label>
+        <select #Tipo name="cbtipo" id="tipo">
+            <option value="seleccionar">Seleccione</option>
+            <option value="fijo">Fijo</option>
+            <option value="celular">Celular</option>
+            <option value="whatsapp">WhatsApp</option>
+            <option value="instagram">Instagram</option>
+            <option value="facebook">Facebook</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="des"> Descripcion:  </label>
+        <input #Des type="text" id="des" >
+    </div>
+    <button type="submit" >Ingresar</button>
+   
+</form>

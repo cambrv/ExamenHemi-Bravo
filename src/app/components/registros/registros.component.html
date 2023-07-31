@@ -1,0 +1,38 @@
+<h1>Registros: <small>Todo Tipo</small></h1>
+<div class="container">
+  <!-- Inicio de columna general: Muestra todos los héroes -->
+  <div class="column">
+    <div class="col animated fadeIn fast" *ngFor="let registro of registros; let i = index">  
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{registro.codigo}}</h5>
+              <p class="card-text">{{registro.cliente}} - {{registro.fecha}}</p>
+                <p class="card-text"><small class="text-body-secondary">{{registro.tipointeraccion}} - {{registro.descripcion}}</small></p>
+              <button (click)="verRegistro(i)" class="btn btn-secondary">Ver</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <!--Fin columna-->
+    
+  </div>
+  <!-- Inicio columna para resultados de búsqueda: -->
+<div class="column">
+  <h2>Resultados de Búsqueda</h2>
+  <br>
+  <div *ngFor="let registro of registrosEncontrados">    
+    <div class="card border-dark mb-3" style="max-width: 18rem;">
+      <div class="card-header">{{registro.fecha}} - {{registro.tipointeraccion}}</div>
+      <div class="card-body">
+        <br>
+        <h5 class="card-title"><i> {{registro.codigo}} .- {{registro.cliente}}</i></h5>
+        <p class="card-text">{{registro.descripcion}} </p>
+      </div>
+    </div>
+  </div>  
+</div>
+</div>
+ 

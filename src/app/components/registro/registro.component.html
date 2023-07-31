@@ -1,0 +1,22 @@
+
+<div class="col animated fadeIn fast" >
+
+</div><h1> Código No.{{registro.codigo}} </h1>
+<small> Fecha: {{registro.fecha}}</small>
+<hr>
+<div class="row">
+    <div class="col-md-8">
+        <h3>Nuestro cliente es: {{registro.cliente}}</h3>
+        <br>
+        <p>
+            Tipo de interacción: {{registro.tipointeraccion}} !
+        </p>
+        <p>
+            Descripción: {{registro.descripcion}}
+        </p>
+    </div>  
+    <div class="col-md-4">
+        <br><br>
+        <a (click)="redirigir()" class="btn btn-outline-danger btn-block"> REGRESAR</a>
+    </div>
+   
